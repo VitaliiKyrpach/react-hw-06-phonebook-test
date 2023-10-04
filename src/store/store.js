@@ -32,7 +32,7 @@ const reducer = (state = init, { type, payload }) => {
         contacts: state.contacts.filter(contact => contact.id !== payload),
       };
     case 'filter':
-      return { filter: payload };
+      return { ...state, filter: payload };
     default:
       return state;
   }
