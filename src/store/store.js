@@ -19,13 +19,6 @@ const reducer = (state = init, { type, payload }) => {
           ? [...state.contacts, { id: nanoid(), ...payload }]
           : [...state.contacts, { id: nanoid(), ...payload }],
       };
-    // case 'filterUser':
-    //   return {
-    //     ...state,
-    //     contacts: state.contacts.filter(contact =>
-    //       contact.name.toLowerCase().includes(payload)
-    //     ),
-    //   };
     case 'deleteUser':
       return {
         ...state,
